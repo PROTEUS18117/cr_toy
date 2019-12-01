@@ -1,0 +1,87 @@
+.my-icon {
+    width: 60px;
+    height: 60px;
+}
+
+body {
+    /*background:url("../img/s123.jpg")no-repeat;*/
+    /*background-size: cover;*/
+    height: 100%;
+}
+
+.hat {
+    background: url("../img/MR.jpg") no-repeat;
+    background-position: center;
+
+
+}
+
+.ivent {
+    background: url("../img/ivent.jpg") no-repeat;
+    background-size: 100%;
+    height: 521px;
+
+    box-sizing: border-box;
+}
+
+.field {
+    border-radius: 15px;
+}
+
+.white {
+    color: white;
+}
+
+.hz {
+    background-color: #1b1e21;
+}
+
+.gabriola {
+    font-family: Gabriola;
+    font-size: 300%;
+}
+
+.gradient {
+    background: linear-gradient(to top, #fefcea, #f1da36);
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+.semilayer {
+    padding: 5px; /* Поля вокруг текста */
+    background: #16110e; /* Цвет фона */
+    margin: 0 auto; /* Выравниваем слой по центру */
+    width: 80%; /* Ширина слоя */
+    opacity: 0.8; /* Значение прозрачности */
+    filter: alpha(Opacity=70);
+}
+.forest{
+    background:url('../img/forest.jpg')no-repeat;
+
+ background-size: cover;
+}
+.bear{
+    background:url('../img/s124.jpg')no-repeat;
+background-position: bottom;
+    background-size: cover;
+}
+.happy{
+    color: #000000;
+}
+.img{
+    height: 214.5px;
+}
+.opacity{
+    opacity:1;
+}
+.jpg{
+    height: 380px;
+}
+.size
+{
+    height: 300px;
+    width: 300px;
+}
+.card{
+    height: 100%;
+}
