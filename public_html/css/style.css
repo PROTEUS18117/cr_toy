@@ -3,7 +3,7 @@
     height: 60px;
 }
 
-body {
+body, html {
     /*background:url("../img/s123.jpg")no-repeat;*/
     /*background-size: cover;*/
     height: 100%;
