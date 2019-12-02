@@ -57,8 +57,9 @@ body, html {
 }
 .forest{
     background:url('../img/forest.jpg')no-repeat;
-height: 100%;
- background-size: cover;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .bear{
     background:url('../img/s124.jpg')no-repeat;

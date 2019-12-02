@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-white forest">
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg">
     <img src="./ico/tree.ico" alt="">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +57,7 @@
                     <div class="col-md-5 p-lg-5 mx-auto my-5 col-10">
                         <p class="lead font-weight-bolder gabriola  happy text-center ">Новогодние подарки</p>
                         <?php
-                        $db = mysqli_connect('localhost', 'root', '','christmas_toy') or die('Подключение к БД не удалось');
+                        $db = mysqli_connect('localhost', 'admin', 'password','christmas_toy') or die('Подключение к БД не удалось');
                         $query = "SELECT * FROM toys";
                         $result = mysqli_query($db, $query);
                         $toys = [];
@@ -76,11 +76,11 @@
                             <?php foreach ($toys as $toy): ?>
                             <div class="mt-2 col-md-4">
                                 <div class="card opacity">
-                                    <img src="image/<?php echo $toy['src']?>" class="card-img-top" alt="Картинка">
+                                    <img src="img/<?php echo $toy['src']?>" class="card-img-top" alt="Картинка">
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $toy['name']?></h5>
                                         <p class="card-text"><?php echo $toy['desk']?></p>
-                                        <p class="card-text"><small class="text-muted">Цена: </small><?php echo $toy['price']?></p>
+                                        <p class="card-text"><small class="text-muted">Цена: </small><?php echo $toy['price']?> рублей</p>
                                     </div>
                                 </div>
                             </div>
