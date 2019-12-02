@@ -57,10 +57,10 @@
                     <div class="col-md-5 p-lg-5 mx-auto my-5 col-10">
                         <p class="lead font-weight-bolder gabriola  happy text-center ">Новогодние подарки</p>
                         <?php
-                        $db=mysqli_connect('localhost', 'root', '','christmas_toy') or die('Подключение к БД не удалось');
+                        $db = mysqli_connect('localhost', 'admin', 'password','christmas_toy') or die('Подключение к БД не удалось');
                         $query = "SELECT * FROM toys";
                         $result = mysqli_query($db, $query);
-                        while($row = mysql_fetch_array($result))
+                        while($row = mysqli_fetch_array($result))
                         {
                             echo '1 ';
                         }
