@@ -60,7 +60,7 @@
                         $db=mysqli_connect('localhost', 'root', '','christmas_toy') or die('Подключение к БД не удалось');
                         $query = "SELECT * FROM toys";
                         $result = mysqli_query($db, $query);
-                        while($row = mysql_fetch_array($result))
+                        while($row = mysqli_fetch_array($result))
                         {
                             echo '1 ';
                         }
