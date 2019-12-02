@@ -57,15 +57,14 @@
                     <div class="col-md-5 p-lg-5 mx-auto my-5 col-10">
                         <p class="lead font-weight-bolder gabriola  happy text-center ">Новогодние подарки</p>
                         <?php
-                        $db = mysqli_connect('localhost', 'admin', 'password','christmas_toy') or die('Подключение к БД не удалось');
+                        $db = mysqli_connect('localhost', 'root', '','christmas_toy') or die('Подключение к БД не удалось');
                         $query = "SELECT * FROM toys";
                         $result = mysqli_query($db, $query);
+                        $toys = [];
                         while($row = mysqli_fetch_array($result))
                         {
-                            echo '1 ';
+                         $toys[] = $row;
                         }
-//                        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-//                        var_dump($row);
                         ?>
                     </div>
                     <div class="product-device hz shadow-sm d-none d-md-block"></div>
@@ -74,57 +73,18 @@
                 <div>
                     <div class="container">
                         <div class=" row">
+                            <?php foreach ($toys as $toy): ?>
                             <div class="mt-2 col-md-4">
                                 <div class="card opacity">
-                                    <img src="./img/svechi.jpg" class="card-img-top" alt="...">
+                                    <img src="image/<?php echo $toy['src']?>" class="card-img-top" alt="Картинка">
                                     <div class="card-body">
-                                        <h5 class="card-title">Название карточки</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <h5 class="card-title"><?php echo $toy['name']?></h5>
+                                        <p class="card-text"><?php echo $toy['desk']?></p>
+                                        <p class="card-text"><small class="text-muted">Цена: </small><?php echo $toy['price']?></p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mt-2">
-                                <div class="card opacity">
-                                    <img src="./img/svechi.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Название карточки</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mt-2">
-                                <div class="card opacity">
-                                    <img src="./img/svechi.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Название карточки</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mt-2">
-                                <div class="card opacity">
-                                    <img src="./img/svechi.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Название карточки</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mt-2">
-                                <div class="card opacity">
-                                    <img src="./img/svechi.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Название карточки</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
